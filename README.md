@@ -25,7 +25,7 @@ different aspects of data being encoded, fairly well.
 
 ##Resources
 
-1.http://dimplejs.org/
-2.http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped
+1.Official dimple.js documentation "http://dimplejs.org/"
+2.Bar Graph example "http://dimplejs.org/examples_viewer.html?id=bars_vertical_grouped"
 3.pandas
 4.Data visualization with D3.js
