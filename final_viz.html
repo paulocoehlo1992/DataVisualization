@@ -13,7 +13,6 @@
       }
     </style>
   </head>
-  </head>
 
 <body class="container">
 	<div class="row">
@@ -26,14 +25,14 @@
     d3.csv("data/survival_by_class.csv", function(data){
         var chart = new dimple.chart(svg1, data);
         chart.addCategoryAxis("x", ["Class","Sex"]);
-        chart.addMeasureAxis("y", "Survival Rate");
+        chart.addMeasureAxis("y", "Survival Rate(%)");
         chart.addSeries("Sex", dimple.plot.bar);
         svg1.append("text")
          .attr("x", chart._xPixels() + chart._widthPixels() / 2)
          .attr("y", chart._yPixels() - 20)
          .style("text-anchor", "middle")
          .style("font-weight", "bold")
-         .text("Survival Rate Across passenger Class");
+         .text("Survival % on Titanic Across passenger Class");
     chart.addLegend(100, 30, 510, 20, "right");
     chart.draw();
     });
