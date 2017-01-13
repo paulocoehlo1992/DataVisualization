@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Visualizing Titanic- Survival</title> <!--Adding title to the plot-->
+    <script src="http://d3js.org/d3.v3.min.js"></script> <!--Binding d3.js script to the plot-->
+    <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script><!--loading dimple.js -->
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+      h2 {
+        color: black;
+        text-align: center;
+      }
+    </style>
+  </head>
+<body class="container">
+	<div class="row">
+		<div id="chart1"></div>
+	</div>
+	<script type="text/javascript">
+		   var width = 650,
+        height = 450;
+    var svg1 = dimple.newSvg("#chart1", width, height);
+    d3.csv("data/survival_by_class.csv", function(data){ //Binding data to the plot
+        var chart = new dimple.chart(svg1, data);
+        chart.addCategoryAxis("x", ["Class","Sex"]); //adding x-axis parameters
+        chart.addMeasureAxis("y", "Survival Rate"); //adding y-axis parameter
+        chart.addSeries("Sex", dimple.plot.bar); //crating bar plot with  dimple.js
+        svg1.append("text")
+         .attr("x", chart._xPixels() + chart._widthPixels() / 2)
+         .attr("y", chart._yPixels() - 20)
+         .style("text-anchor", "middle")
+         .style("font-weight", "bold")
+         .text("Survival Rate(proportion) on Titanic Across passenger Class"); //dding title to the plot 
+    chart.addLegend(100, 30, 510, 20, "right"); //dding legend to the plot 
+    chart.draw();//drawing the chart 
+    });
+	</script>
+</body>
+
+</html>
