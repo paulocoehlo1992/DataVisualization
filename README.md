@@ -6,20 +6,18 @@ This project is part Udacity Data Analyst nanodegree.From the variety of dataset
 
 ##Summary
 
-the visualization depicted the survival ratio  of passengers in titanic-crisis based on passenger class and gender.The percentage survival can be coputed by multiplying the proportion value to 100.The Survival ratio is defined as :
-
-survival ratio = (number of people survived ) / (number of people survived + number of people did not survive)
+the visualization depicted the survival percentage of passengers in titanic-crisis based on passenger class and gender.
 
 ##Design
-I created new dataset from the titanic dataset by using pandas having features like survival rate, class etc.In the created dataset"survival_by_class.csv" ,the column named "Survival rate " represents the proportion of people who survived out of total people travelling in that class across gender. For example ,the proportion of 0.42 , represents the ratio of female passengers who survived in class 1, to the total number of female passengers travelling in passenger class 1. I used dimple.js to create this visualization. I tired variety of charts including line chart, scatterplot etc but none of them sufficiently represented the comparision aspect of the data being visually encoded. Bar chart in this case does the job  of capturing different aspects of data being encoded, fairly well.
+I created new dataset from the titanic dataset by using pandas having features like survival rate, class etc.In the created dataset"survival_by_class.csv" ,the column named "Survival rate " represents the percentage of people who survived out of total people travelling in that class across gender. For example ,the percentage  of 42 , represents the ratio of female passengers who survived in class 1, to the total number of female passengers travelling in passenger class 1 multipled by 100. I used dimple.js to create this visualization. I tired variety of charts including line chart, scatterplot etc but none of them sufficiently represented the comparision aspect of the data being visually encoded. Bar chart in this case does the job  of capturing different aspects of data being encoded, fairly well.
 
 ##Important Findings 
 
-1.We can clearly see that survival ratio for female passengers are highest in passenger class 1, which was about 0.43 . Same goes with male passengers, survival ratio is highest in passenger class 1.This corroborate the fact that there was some bias in the titanic rescue mission towards class 1 passengers and females. 
+1.We can clearly see that survival percentage  for female passengers are highest in passenger class 1, which was about 43% . Same goes with male passengers, survival percentage is highest in passenger class 1.This corroborate the fact that there was some bias in the titanic rescue mission towards class 1 passengers and females. 
 
-2.We can also see that across all the passenger class, female have higher survival ratio as compared to male.
+2.We can also see that across all the passenger class, female have higher survival rate(%) as compared to male.
 
-3.It is also interesting to note that male passengers in class 3, have slightly better survival ratio as compared to class 2. 
+3.It is also interesting to note that male passengers in class 3, have slightly better survival rate(%) as compared to class 2. 
 
 ##Feedback
 
