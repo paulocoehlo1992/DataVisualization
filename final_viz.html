@@ -25,14 +25,14 @@
         var chart = new dimple.chart(svg1, data);
         chart.addCategoryAxis("x", ["Class","Sex"]); //adding x-axis parameters
         var y = chart.addMeasureAxis("y", "Survival Rate"); 
-        y.title="Survival (%) across different class and gender";//adding y-axis parameter
+        y.title="Survival rate(%) across different class and gender";//adding y-axis parameter
         chart.addSeries("Sex", dimple.plot.bar); //crating bar plot with  dimple.js
         svg1.append("text")
          .attr("x", chart._xPixels() + chart._widthPixels() / 2)
          .attr("y", chart._yPixels() - 20)
          .style("text-anchor", "middle")
          .style("font-weight", "bold")
-         .text("Survival percentage on Titanic Across passenger Class"); //dding title to the plot 
+         .text("Survival rate(%) on Titanic Across passenger Class"); //dding title to the plot 
     chart.addLegend(100, 30, 510, 20, "right"); //dding legend to the plot 
     chart.draw();//drawing the chart 
     });
